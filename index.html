@@ -3,8 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Blank</title>
-<meta name="description" content="">
+<title>JBRTSNTS</title>
+<link rel="shortcut icon" href="./favicon.ico">
+<meta name="description" content="Jobert Santos (Front-end Developer) - Website Portfolio">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no, shrink-to-fit=no">
 <!-- CSS & JS -->
 <link rel="stylesheet" href="css/vendor/normalize.css">
@@ -14,11 +15,35 @@
 <script src="js/vendor/modernizr-3.6.0.min.js"></script>
 <script src="js/vendor/fontawesome-all.min.js"></script>
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
+
+<script>
+	function fadeOutEffect() {
+	    var fadeTarget = document.getElementsByClassName('preloader')[0];
+		console.log(fadeTarget);
+	    var fadeEffect = setInterval(function () {
+	        if (!fadeTarget.style.opacity) {
+	            fadeTarget.style.opacity = 1;
+	        }
+	        if (fadeTarget.style.opacity > 0) {
+	            fadeTarget.style.opacity -= 0.1;
+	        } else {
+	            clearInterval(fadeEffect);
+	            setTimeout(function() {
+	            	fadeTarget.remove();
+	            }, 300)
+	        }
+	    }, 25);
+	}
+	window.addEventListener('load', fadeOutEffect);
+</script>
 </head>
 <body>
 <!--[if lte IE 9]>
 <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
 <![endif]-->
+<div class="preloader">
+  	<img src="./images/loader.gif" alt="Loading..." />
+</div>
 
 <main class="wrapper">
 	<div class="wrap-content">

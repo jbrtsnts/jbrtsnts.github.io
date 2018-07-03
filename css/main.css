@@ -1213,3 +1213,32 @@ strong {
 	-webkit-box-shadow: 0 3px 0 #d8baff;
 	box-shadow: 0 3px 0 #d8baff;
 }
+
+.preloader {
+	position: fixed;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-ms-align-items: center;
+	align-items: center;
+	justify-content: center;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999;
+	background: #fff;
+	-webkit-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-ms-transition: all 0.3s linear;
+	-o-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+	opacity: 1;
+}
+.preloader img {
+	max-width: 75px;
+}
